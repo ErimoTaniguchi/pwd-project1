@@ -1,23 +1,88 @@
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Generic (CALLED IN NORMALIZE.CSS)
+	- Normalize
+	- Box sizing
+	- Media width
+# Base
+	- Typography
+	- Elements
+	- Links
+# Components
+	- Header
+	- Main
+	- Footer
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+
+/* Typography
+--------------------------------------------- */
 body {
 	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-	font-weight: 400;
 	font-size: 1rem;
+	font-weight: 400;
 	line-height: 1.5;
-	color: #333333;
-	background-color: #cecfe0;
+	color: #282828;
+	background-color: #ffffff;
+	max-width: 80rem;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: Georgia, Times, "Times New Roman", serif;
+	margin: .5em 0;
+	font-size: 1.75rem;
+	text-align: center;
+}
+
+p {
+	margin: 0 0 1.5em;
+}
+
+
+/* Links
+--------------------------------------------- */
+a,
+a:visited {
+	color:#2d2dcb
+}
+
+
+
+/*--------------------------------------------------------------
+# component
+--------------------------------------------------------------*/
+
 
 /* Header
 --------------------------------------------- */
 .header {
-	background-color: #a1a1a6;
 	display: flex;
 	justify-content: space-between;
 	padding: 1rem 1rem;
+	background-color: #a1a1a6;
+	border-radius: 1rem;
 }
 
 .site-name {
+	font-family: Georgia, 'Times New Roman', Times, serif;
 	font-size: 2rem;
+	color: #282828;
+}
+
+a.site-name {
+	color: #282828;
+	text-decoration: none;
 }
 
 .menu-toggle{
@@ -47,11 +112,13 @@ body {
 	margin: 1rem;
 	width: 20rem;
 	height: 100%;
+	border-radius: 1rem;
 }
 
 .project-more {
 	border: 0.1rem solid #333333;
 	padding: 1rem;
+	border-radius: 1rem;
 }
 
 
