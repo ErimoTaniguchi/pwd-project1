@@ -164,7 +164,8 @@ a.site-name {
 /* About
 --------------------------------------------- */
 .section-about {
-	
+	display: flex;
+	flex-direction: column;
 }
 
 .linkedin {
