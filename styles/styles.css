@@ -1,37 +1,13 @@
-
-/*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-# Generic (CALLED IN NORMALIZE.CSS)
-	- Normalize
-	- Box sizing
-	- Media width
-# Base
-	- Typography
-	- Elements
-	- Links
-# Components
-	- Header
-	- Main
-	- Footer
---------------------------------------------------------------*/
-
-
-/*--------------------------------------------------------------
-# Base
---------------------------------------------------------------*/
-
 /* Typography
 --------------------------------------------- */
 body {
-	font-family: 'Noto Sans';
+	font-family: Noto Sans;
 	font-size: 1rem;
-	font-weight: 900;
-	line-height: 1.5;
-	color: #282C6B;
-	background-color: #ffffff;
-	max-width: 80rem;
-	
+	font-weight: 500;
+	line-height: 1.6;
+	color: #272831;
+	background-color: #E8F4F2;
+	margin: 0;
 }
 
 h1,
@@ -40,151 +16,223 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: 'Climate Crisis';
-	margin: .5em 0;
-	font-size: 1.75rem;
-	text-align: center;
-	color: #FFA200;
-}
-
-p {
-	margin: 0 0 1.5em;
-}
-
-
-/* Links
---------------------------------------------- */
-a,
-a:visited {
-	color:#2d2dcb
-}
-
-
-
-/*--------------------------------------------------------------
-# component
---------------------------------------------------------------*/
-
-
-/* Header
---------------------------------------------- */
-.header {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 1rem 1rem;
-	background-color: #13806E;
-}
-
-.site-name {
-	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-family: Climate Crisis;
+	font-weight: 700;
+	color: #13806E;
 	font-size: 2rem;
 }
 
-a.site-name {
-	color: #FFA200;
-	text-decoration: none;
-}
-
-.menu-toggle{
-	background: none;
-	border: 0 solid ;
-}
-
-.nav-menu {
-	display: none;
+h2 {
 	font-size: 1.5rem;
 }
 
-.nav-menu a {
-	color: #282828;
+h3 {
+	font-size: 1rem;
+}
+
+
+/* link
+--------------------------------------------- */
+
+a {
+	color: #272831;
 	text-decoration: none;
-}
-
-@media (min-width: 50em) {
-	
-	.menu-toggle {
-		display: none;
-	}
-
-	.nav-menu {
-		display: flex;
-		padding: 0 1rem;
-	}
-
-	.nav-menu ol {
-		display: flex;
-		justify-content: flex-end;
-
-	}
 
 }
 
 
-/* Project */
-.page-header  {
-    background-size: cover;      
-    background-position: center ;
-	width: auto;
-	min-height: 30rem;
+/* Elements
+--------------------------------------------- */
+
+/* header */
+
+.header {
+
+	position: fixed;
+  	top: 0;
+	width: 100vw;
+	box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #13806E;
+
+}
+
+.nav-menu {
+
+	display: none;
+
+}
+
+.menu-toggle {
+	background: none;
+    border: none;
+	fill: #FFA200;
+	z-index: 9999;  
+}
+
+header a {
+
+	font-family: Climate Crisis;
+	font-weight: 700;
+	color: #FFA200;
+
+} 
+
+
+/* page header */
+
+.page-header {
+
+	height: 22rem;
+	margin: 4rem 0 ;
+	padding: 2rem;
+	background-color: #13806E;
 	text-align: center;
-}
-
-.project {
 	display: flex;
-	justify-content: space-between;
+  	flex-direction: column;
+	justify-content: center;
 	align-items: center;
-	gap: 0rem;
-	flex-wrap: wrap;
 }
 
-.project-cards {
-	border: 0.1rem solid #333333;
-	display: flex;
-	flex-direction: column;
-	padding: 0 0 0 1rem;
-	margin: 1rem;
-	width: 20rem;
-	height: 100%;
-	border-radius: 1rem;
+.page-header h1 {
+
+	color: #FFA200;
+
 }
 
-.project-more {
-	border: 0.1rem solid #333333;
-	padding: 1rem;
-	border-radius: 1rem;
+.page-header p {
+
+	color: #E8F4F2;
+
+}
+
+
+
+/* PROJECTS */
+
+.projects h1 {
+
+	text-align: center;
+	padding: 3rem 1rem 1.5rem 1rem;
+
+}
+
+.projects-cards {
+
+	border: 0.05rem solid #dbf4f0;
+	box-shadow: 0.25rem 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
+	/* reference -> https://haniwaman.com/css-box-shadow/ */
+	border-radius: 20px ; 
+	padding: 0;
+	margin: 1rem 1rem 2rem 1rem;
+
+}
+
+
+.projects-cards p {
+	
+	padding: 0 1rem;
+	margin: 0;
+	
+}
+
+
+.projects-cards h2 {
+	
+	padding: 0.5rem 1rem;
+	margin: 0;
+	
+}
+
+.projects-cards h3 {
+
+	padding: 0.5rem 1rem;
+	margin: 0;
+
+}
+
+.projects-cards img {
+
+	width: 100%;
+	border-radius: 20px 20px 0 0 ; 
+	
+
+}
+
+.tools img {
+
+	width: 2rem;
+	padding: 0 0.5rem 0.5rem 0.5rem;
+	border-radius: 0 ; 
+
 }
 
 .button-container {
-	display: flex;
-	justify-self: center;
-	margin: 1rem;
-}
 
-
-
-/* About
---------------------------------------------- */
-.section-about {
-	display: flex;
-	flex-direction: column;
-}
-
-.linkedin {
-	width: 5rem; 
-	height: 5rem;
-}
-
-
-
-
-
-
-/* Footer
---------------------------------------------- */
-
-.footer {
-	background-color: #a1a1a6;
-	padding: 2rem 0 ;
+	font-family: Climate Crisis;
+	font-weight: 700;
+	font-size: 1rem;
 	text-align: center;
+	border: 0.05rem solid #13806E;
+	background-color: #13806E;
+	padding: 0.2rem;
+	margin: 1rem 5rem 1rem 5rem;
+	border-radius: 0.5rem;
+
 }
+
+.button-container a {
+
+	color: #E8F4F2;
+
+}
+
+/* ここから */
+.button-container a:visited {
+
+	background-color: #FFA200;
+	
+}
+
+
+
+/* main {
+	max-width: 120rem;
+	margin: 0 auto;
+} */
+/* 
+figure {
+	margin: 1rem auto;
+	width: 50%;
+	max-width: 40rem;
+}
+
+figcaption {
+	text-align: center;
+	font-size: .75rem;
+	font-style: italic;
+}
+
+ul {
+	padding: 0 0 0 2rem;
+	margin: 0 0 0 1.5rem;
+}
+
+table {
+	border-collapse: collapse;
+	margin: 2rem auto;
+	background-color: #eee;
+}
+
+caption {
+	font-size: 1.25rem;
+}
+
+td,
+th {
+	border: 1px solid #888;
+	padding: .5rem;
+} */
