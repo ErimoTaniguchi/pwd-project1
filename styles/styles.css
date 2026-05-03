@@ -120,7 +120,7 @@ header a {
 	header a:focus,
 	header :active {
 		color: #E8F4F2;
-		font-size: 2rem;
+		font-size: 1.7rem;
 	}
 
 }
@@ -160,7 +160,7 @@ header a {
 	}
 
 .projects h2 {
-	text-align: center;
+	font-size: 1.5rem;
 	padding: 3rem 1rem 1.5rem 1rem;
 }
 
@@ -284,4 +284,9 @@ header a {
 	margin-top: 3rem;
 }
 
+.footer a:hover,
+.footer a:focus,
+.footer a:active {
+	font-size: 1.3rem;
+}
 
