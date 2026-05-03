@@ -9,7 +9,7 @@ html, body {
 /* Typography
 --------------------------------------------- */
 body {
-	font-family: Noto Sans;
+	font-family: "Noto Sans";
 	font-size: 1rem;
 	font-weight: 500;
 	line-height: 1.6;
@@ -24,16 +24,14 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: Climate Crisis;
+	font-family: "Climate Crisis";
 	font-weight: 700;
 	color: #13806E;
 	font-size: 2rem;
 	text-transform: uppercase;
 }
 
-h2 {
-	font-size: 1.5rem;
-}
+
 
 h3 {
 	font-size: 1rem;
@@ -85,7 +83,7 @@ a {
 }
 
 header a {
-	font-family: Climate Crisis;
+	font-family: "Climate Crisis";
 	font-weight: 700;
 	color: #FFA200;
 	display: block;
@@ -157,11 +155,11 @@ header a {
 .project-container {
 	display: flex;
 	flex-direction: column;
-	align-items:center ;
+	align-items: stretch;
 	gap: 2rem;
 	}
 
-.projects h1 {
+.projects h2 {
 	text-align: center;
 	padding: 3rem 1rem 1.5rem 1rem;
 }
@@ -198,7 +196,7 @@ header a {
 }
 
 .button-container {
-	font-family: Climate Crisis;
+	font-family: "Climate Crisis";
 	font-weight: 700;
 	font-size: 1rem;
 	width: 10rem;
@@ -229,6 +227,7 @@ header a {
 
 	.project-container {
 		display: flex;
+		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content:center ;
 	}
@@ -237,7 +236,7 @@ header a {
 
 /* ABOUT */
 
-.about h1 {
+.about h2 {
 	text-align: center;
 	padding: 3rem 2rem 1.5rem 2rem;
 }
