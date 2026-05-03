@@ -1,3 +1,11 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: auto; 
+}
+
 /* Typography
 --------------------------------------------- */
 body {
@@ -20,6 +28,7 @@ h6 {
 	font-weight: 700;
 	color: #13806E;
 	font-size: 2rem;
+	text-transform: uppercase;
 }
 
 h2 {
@@ -30,6 +39,13 @@ h3 {
 	font-size: 1rem;
 }
 
+p {
+	padding: 0 1rem;
+	margin: 0;
+}
+
+
+
 
 /* link
 --------------------------------------------- */
@@ -37,7 +53,6 @@ h3 {
 a {
 	color: #272831;
 	text-decoration: none;
-
 }
 
 
@@ -47,7 +62,6 @@ a {
 /* header */
 
 .header {
-
 	position: fixed;
   	top: 0;
 	width: 100vw;
@@ -55,15 +69,12 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: 1rem 2rem;
     background-color: #13806E;
-
 }
 
 .nav-menu {
-
 	display: none;
-
 }
 
 .menu-toggle {
@@ -74,18 +85,52 @@ a {
 }
 
 header a {
-
 	font-family: Climate Crisis;
 	font-weight: 700;
 	color: #FFA200;
-
+	display: block;
 } 
+
+
+@media (min-width: 50em) {
+	
+	header a {
+		font-size: 1.5rem;
+	}
+
+	.menu-toggle {
+		display: none;
+	}
+
+	.nav-menu {
+		display: flex;
+	}
+	
+	.nav-menu ul{
+		display: flex;
+		flex-direction: row;
+	}
+
+	.nav-menu li{
+		list-style: none;
+		margin-left: 1.5rem;
+		display: block;
+	}
+
+	
+	header a:hover,
+	header a:focus,
+	header :active {
+		color: #E8F4F2;
+		font-size: 2rem;
+	}
+
+}
 
 
 /* page header */
 
 .page-header {
-
 	height: 22rem;
 	margin: 4rem 0 ;
 	padding: 2rem;
@@ -98,141 +143,146 @@ header a {
 }
 
 .page-header h1 {
-
 	color: #FFA200;
-
 }
 
 .page-header p {
-
 	color: #E8F4F2;
-
 }
 
 
 
 /* PROJECTS */
 
-.projects h1 {
+.project-container {
+	display: flex;
+	flex-direction: column;
+	align-items:center ;
+	gap: 2rem;
+	}
 
+.projects h1 {
 	text-align: center;
 	padding: 3rem 1rem 1.5rem 1rem;
-
 }
 
 .projects-cards {
-
 	border: 0.05rem solid #dbf4f0;
 	box-shadow: 0.25rem 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
 	/* reference -> https://haniwaman.com/css-box-shadow/ */
 	border-radius: 20px ; 
 	padding: 0;
-	margin: 1rem 1rem 2rem 1rem;
-
+	/* margin: 1rem auto 2rem auto; */
+	max-width: 20rem;
 }
-
-
-.projects-cards p {
-	
-	padding: 0 1rem;
-	margin: 0;
-	
-}
-
 
 .projects-cards h2 {
-	
 	padding: 0.5rem 1rem;
 	margin: 0;
-	
 }
 
 .projects-cards h3 {
-
 	padding: 0.5rem 1rem;
 	margin: 0;
-
 }
 
 .projects-cards img {
-
 	width: 100%;
-	border-radius: 20px 20px 0 0 ; 
-	
-
+	border-radius: 20px 20px 0 0 ;
 }
 
 .tools img {
-
 	width: 2rem;
 	padding: 0 0.5rem 0.5rem 0.5rem;
 	border-radius: 0 ; 
-
 }
 
 .button-container {
-
 	font-family: Climate Crisis;
 	font-weight: 700;
 	font-size: 1rem;
+	width: 10rem;
 	text-align: center;
-	border: 0.05rem solid #13806E;
+	border: 0 solid #13806E;
 	background-color: #13806E;
 	padding: 0.2rem;
-	margin: 1rem 5rem 1rem 5rem;
+	margin: 2rem auto;
 	border-radius: 0.5rem;
-
+	box-shadow: 0.25rem 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
+	/* reference -> https://haniwaman.com/css-box-shadow/ */
 }
 
 .button-container a {
-
 	color: #E8F4F2;
-
+	display: block;
 }
 
-/* ここから */
-.button-container a:visited {
-
+.button-container:hover,
+.button-container:focus,
+.button-container:active {
 	background-color: #FFA200;
-	
+	color: #E8F4F2;
+	width: 13rem;
 }
 
+@media (min-width: 50em) {
 
+	.project-container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content:center ;
+	}
 
-/* main {
-	max-width: 120rem;
-	margin: 0 auto;
-} */
-/* 
-figure {
-	margin: 1rem auto;
-	width: 50%;
-	max-width: 40rem;
 }
 
-figcaption {
+/* ABOUT */
+
+.about h1 {
 	text-align: center;
-	font-size: .75rem;
-	font-style: italic;
+	padding: 3rem 2rem 1.5rem 2rem;
 }
 
-ul {
-	padding: 0 0 0 2rem;
-	margin: 0 0 0 1.5rem;
+.about p {
+	margin: 0 1rem 2rem 1rem ;
 }
 
-table {
-	border-collapse: collapse;
-	margin: 2rem auto;
-	background-color: #eee;
+
+/* FOOTER */
+
+.footer {
+	background-color: #13806E;
+	margin-top:4rem ;
 }
 
-caption {
-	font-size: 1.25rem;
+.footer-containar {
+	display: flex;
+    justify-content: space-between; 
+    align-items: flex-start;   
+    padding: 2rem;                 
+    margin: 0;
 }
 
-td,
-th {
-	border: 1px solid #888;
-	padding: .5rem;
-} */
+.footer ul {
+    list-style: none;
+    padding: 0;  
+    margin: 0;
+}
+.footer li {
+	padding: 0.5rem 0;
+}
+
+.footer a {
+	color: #E8F4F2;
+}
+
+.linkedin {
+	width: 3rem;
+}
+
+.footer p {
+	color: #E8F4F2;
+	text-align: center;
+	margin-top: 3rem;
+}
+
+
